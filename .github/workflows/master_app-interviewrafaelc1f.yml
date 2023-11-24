@@ -34,9 +34,9 @@ jobs:
       #   working-directory: ./back-end/web-api
       #   run: python app.py
 
-      - name: Update database
-        working-directory: ./back-end/web-api
-        run: python setup.py
+      # - name: Update database
+      #   working-directory: ./back-end/web-api
+      #   run: python setup.py
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -67,13 +67,15 @@ jobs:
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
         with:
           app-name: 'app-interviewrafaelc1f'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F5EF14EFF2BE4137B5588069167D8AC5 }}
+          startup-file: 'startup.sh'
 
-      - name: Run Application on Azure
-        run: az webapp ssh --name app-interviewrafaelc1f --resource-group rg-sre-user-02 --command "python app.py"
+      # - name: Run Application on Azure
+      #   run: az webapp ssh --name app-interviewrafaelc1f --resource-group rg-sre-user-02 --command "python app.py"
 
       - name: Update database on Azure
         run: az webapp ssh --name app-interviewrafaelc1f --resource-group rg-sre-user-02 --command "python setup.py"
