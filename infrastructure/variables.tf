@@ -7,6 +7,7 @@ variable "person_name" {
 variable "rg_name" {
   description = "Nome do resource group"
   type        = string
+  default     = "rg-sre-user-02"
 }
 
 variable "location" {
@@ -25,4 +26,5 @@ variable "db_password" {
   description = "Database administrator password"
   type        = string
   sensitive   = true
+  default     = "abcd1234!"
 }
