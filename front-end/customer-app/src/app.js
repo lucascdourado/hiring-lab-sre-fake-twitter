@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import Post from "./post";
@@ -9,16 +10,27 @@ function App() {
   const [postList, setPostList] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const [hasUpdated, setHasUpdated] = useState(false)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch(API_URL).then(async (result) => {
+    fetch(API_URL)
+      .then((response) => {
+        if (!response.ok) { throw Error(response.statusText); }
+        return response.json();
+      })
+      .then((resultAsJson) => {
+        setPostList(resultAsJson);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setIsLoading(false);
+      });
+  }, [API_URL, hasUpdated]);
 
-      const resultAsJson = await result.json()
-      setPostList(resultAsJson)
-      setIsLoading(false)
-    })
-
-  }, [hasUpdated])
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   const handleSubmit = (values) => {
     setIsLoading(true)

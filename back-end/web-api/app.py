@@ -1,6 +1,6 @@
 
 import datetime
-from flask_sqlalchemy import Model
+from flask_sqlalchemy import model
 
 from sqlalchemy import desc
 from database import db_session, init_db
