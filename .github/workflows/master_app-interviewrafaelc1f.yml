@@ -77,7 +77,7 @@ jobs:
       # - name: Run Application on Azure
       #   run: az webapp ssh --name app-interviewrafaelc1f --resource-group rg-sre-user-02 --command "python app.py"
 
-      - name: Update database on Azure
-        run: az webapp ssh --name app-interviewrafaelc1f --resource-group rg-sre-user-02 --command "python setup.py"
-        env: 
-          NAME: DatabaseUpdate
+      # - name: Update database on Azure
+      #   run: az webapp ssh --name app-interviewrafaelc1f --resource-group rg-sre-user-02 --command "python setup.py"
+      #   env: 
+      #     NAME: DatabaseUpdate
