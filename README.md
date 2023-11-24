@@ -22,15 +22,15 @@ O check-list das atividades a seguir pode ajudar a guiá-lo pelo laboratório. E
 
 ### Infrastructure
 
-- [ ] Ajustar e implementar a definição do Terraform no resource group definido.
+- [x] Ajustar e implementar a definição do Terraform no resource group definido.
 
 ### Front-end Web
-- [ ] Compilar o front-end reactjs (customer-app)
-- [ ] Publicar o front-end (customer-app) em um storage account
+- [x] Compilar o front-end reactjs (customer-app)
+- [x] Publicar o front-end (customer-app) em um storage account
 
 ### Back-end
-- [ ] Publicar as alterações do banco de dados no PgSQL
-- [ ] Publicar a web-api no app service
+- [x] Publicar as alterações do banco de dados no PgSQL
+- [x] Publicar a web-api no app service
 
 
 ## Referências
