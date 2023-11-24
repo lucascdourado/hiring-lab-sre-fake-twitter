@@ -16,7 +16,7 @@ Sua meta é implementar uma aplicação simples fornecida nesse repositório. Vo
 
 A aplicação está funcionando e disponível no endereço a seguir: 
 
-https://strafael2na.z13.web.core.windows.net/
+https://strafaelc1f.z13.web.core.windows.net/
 
 O check-list das atividades a seguir pode ajudar a guiá-lo pelo laboratório. Existem algumas atividades que não estão mapeadas abaixo, pois são justamente os ajustes necessários para que a aplicação funcione corretamente.
 
