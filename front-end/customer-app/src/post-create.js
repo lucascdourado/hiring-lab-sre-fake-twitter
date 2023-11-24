@@ -1,6 +1,7 @@
-import React from 'react';
 import { useState } from "react";
 import { Col, Container, Form, Row, Button } from "react-bootstrap";
+
+
 
 export default function PostCreate(props) {
 

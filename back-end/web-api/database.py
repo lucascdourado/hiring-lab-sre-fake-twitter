@@ -8,9 +8,9 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from dotenv import load_dotenv
 load_dotenv()
 
-DATABASE_URI = 'postgresql://dbadmin:abcd1234!@localhost/postgres'
+DATABASE_URI = os.environ.get("DATABASE_URI")
 
-engine = create_engine(DATABASE_URI)
+engine = create_engine(DATABASE_URI, convert_unicode=True)
 
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
