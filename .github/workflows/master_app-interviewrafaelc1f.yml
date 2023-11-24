@@ -72,7 +72,7 @@ jobs:
           app-name: 'app-interviewrafaelc1f'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F5EF14EFF2BE4137B5588069167D8AC5 }}
-          startup-file: 'startup.sh'
+          startup-comand: 'python app.py'
 
       # - name: Run Application on Azure
       #   run: az webapp ssh --name app-interviewrafaelc1f --resource-group rg-sre-user-02 --command "python app.py"
